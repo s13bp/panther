@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BREAST MILK</title>
+    <link rel="icon" href="favicon.png">
+    <meta name="description" content="The Best Eth Friendly Miner"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="css-8apw0y">
+            <div class="css-4znt71">
+                <button v-if="metamaskAccount" @click.prevent="onDisconnect" class="css-1rfik0i"
+                    type="button">Disconnect
+                    <span class="css-w0pj6f"></span>
+                </button>
+                <button v-else @click.prevent="onConnect" class="css-1rfik0i" type="button">Connect
+                    <span class="css-w0pj6f"></span>
+                </button>
+                <div class="css-1qsl8ju">
+                    <img src="/images/logo.png" width="100%">
+                    <button v-if="metamaskAccount" @click.prevent="onDisconnect" class="css-xogg82"
+                        type="button">Disconnect
+                        <span class="css-w0pj6f"></span>
+                    </button>
+                    <button v-else @click.prevent="onConnect" class="css-xogg82" type="button">Connect
+                        <span class="css-w0pj6f"></span>
+                    </button>
+                    <h6 class="css-3fl4rv">The Eth Reward Pool with the Best daily return and lowest dev fee</h6>
+                </div>
+                <div class="css-dbec2e">
+                    <div class="css-3lnbwi">
+                        <div class="css-nq5jxc">
+                            <p class="css-jojjwf">Contract</p>
+                            <h5 class="css-10si35k">{{getBalance}} ETH</h5>
+                        </div>
+                        <div class="css-nq5jxc">
+                            <p class="css-jojjwf">Wallet</p>
+                            <h5 class="css-10si35k">{{balance}} ETH</h5>
+                        </div>
+                        <div class="css-nq5jxc">
+                            <p class="css-jojjwf">Your Boobs</p>
+                            <h5 class="css-10si35k">{{getMyBOOB}} milk</h5>
+                        </div>
+                        <div class="css-ddmltu">
+                            <div class="css-0">
+                                <div class="css-79elbk">
+                                    <input type="number" min="0" max="0" v-model="buyAmount" class="css-fi9125"
+                                        value="0">
+                                    <p class="css-viowja">ETH</p>
+                                </div>
+                            </div>
+                            <div class="css-5vb4lz">
+                                <button class="css-4sd5su" :class="buyAmount ? '' : 'Mui-disabled'" type="button"
+                                    @click.prevent="BuyBoobs">Hire Boobs</button>
+                            </div>
+                            <hr class="css-39bbo6">
+                            <div class="css-nq5jxc">
+                                <p class="css-vlu4wp">Your Rewards</p>
+                                <h5 class="css-j1ayh8">{{MilksRewards}} ETH</h5>
+                            </div>
+                            <div class="css-m7b68o">
+                                <div class="css-5y52ga">
+                                    <button class="css-u1usi" :class="metamaskAccount ? '' : 'Mui-disabled'"
+                                        type="button" @click.prevent="HireBoobs">Rehire Boobs</button>
+                                </div>
+                                <div class="css-xj09ev">
+                                    <button class="css-u1usi" :class="metamaskAccount ? '' : 'Mui-disabled'"
+                                        type="button" @click.prevent="SellMilks">Sell milk</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="    css-1x3lqes">
+                    <div class="css-3lnbwi">
+                        <h5 class="css-rvkvz4">Milk Nutrition Facts</h5>
+                        <div class="css-1v3caum">
+                            <div class="css-8rnkcc">
+                                <p class="css-l3b8w4">Daily Return</p>
+                                <p class="css-l3b8w4">15%</p>
+                            </div>
+                            <div class="css-8rnkcc">
+                                <p class="css-l3b8w4">APR</p>
+                                <p class="css-l3b8w4">2,920%</p>
+                            </div>
+                            <div class="css-8rnkcc">
+                                <p class="css-l3b8w4">Dev Fee</p>
+                                <p class="css-l3b8w4">25%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="css-1vnafc0">
+                    <div class="css-3lnbwi" style="padding-left: 8px; padding-right: 8px;">
+                        <h5 class="css-1s9uqdj">Referral Link </h5>
+                        <input class="css-eyb7os" v-model="referral" readonly>
+                        <p class="css-dir1dn">Earn 10% of the ETH used to buy stakes from anyone who uses your link</p>
+                    </div>
+                </div>
+                <div class=" css-qwtwhb" style="display: none;">
+                    <div class="MuiGrid-item css-1wxaqej">
+                        <a href="https://t.me/" target="__blank">
+                            <img src="images/telegram.svg" width="48" height="48">
+                        </a>
+                    </div>
+                    <div class="MuiGrid-item css-1wxaqej">
+                        <a href="https://twitter.com/" target="__blank">
+                            <img src="images/twitter.svg" width="48" height="48">
+                        </a>
+                    </div>
+                    <div class="MuiGrid-item css-1wxaqej">
+                        <a href="https://twitter.com/" target="__blank">
+                            <img src="images/discord.svg" width="48" height="48">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript"
+        src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
