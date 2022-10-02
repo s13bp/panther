@@ -1,5 +1,5 @@
 // Smart Contract Details
-const contractAddress = "0x30D9Db1af5db77446576D3357c739C7Ba8666479";
+const contractAddress = "0xf2509E5b768E447c157F2Ef781B952C44193e997";
 const contractABI = [
 	{
 		"inputs": [
@@ -281,9 +281,9 @@ var app = new Vue({
                 package: WalletConnectProvider,
                 options: {
                     rpc: {
-                        97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+                        338: "https://evm-t3.cronos.org/",
                     },
-                    chainId: 97,
+                    chainId: 338,
                     infuraId: "d85fda7b424b4212ba72f828f48fbbe1",
                     pollingInterval: "10000",
                 },
@@ -326,8 +326,8 @@ var app = new Vue({
             this.web3Object = new Web3(provider);
 
             this.chainId = await this.web3Object.eth.getChainId();
-            if (this.chainId !== 97 ) {
-                this.notify("Please Connect You Wallet to Binance Smart Chain test");
+            if (this.chainId !== 338 ) {
+                this.notify("Please Connect You Wallet to Cronos TESTNET !");
                 return;
             }
 
@@ -345,7 +345,7 @@ var app = new Vue({
             this.readValues();
         },
         async readValues() {
-            const web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545");
+            const web3 = new Web3("https://evm-t3.cronos.org/");
             let instance = new web3.eth.Contract(contractABI,contractAddress);
             Promise.all([instance.methods.getBalance().call(), instance.methods.getMyBOOB(this.metamaskAccount).call(), ]).then(([getBalance,getMyBOOB])=>{
                 console.log(getBalance, getMyBOOB);
